@@ -57,7 +57,7 @@ function populateGDELT(data){
                     <img src="${v.thumbnail}" alt="" height="48" width="48" class="rounded mt-2">
                     <div class="ms-2">  
                         <p class="mb-0 smallest">${v.source}</p>
-                        <h6 class="smaller fw-bold mb-0 mt-0">${v.title}</h6>                        
+                        <h6 class="small fw-bold mb-0 mt-0">${v.title}</h6>                        
                     </div>                  
         </div>  
         <div class="container mt-3">
