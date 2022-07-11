@@ -28,45 +28,65 @@
                 </div>
                 <div class="offcanvas-body">
                     <div class="flex-shrink-0 bg-white">                       
-                        <ul class="list-unstyled ps-0">                       
+                        <ul class="list-unstyled ps-0">    
+                          <li class="mb-1">News</li>
                           <li class="mb-1">
-                            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
-                              Home
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Top News</a></li>
+                                <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Country News</a></li>
+                                <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Language News</a></li>
+                              </ul>
+                          </li>                   
+                          <li class="mb-1">
+                            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#news-collapse" aria-expanded="false">
+                              By Source
                             </button>
-                            <div class="collapse show" id="home-collapse">
+                            <div class="collapse" id="news-collapse">
+                              <!-- <ul class="list-unstyled ps-0">
+                                <li class="mb-1 small ms-3"><span class="small">By Source</span></li>
+                                <li class="mb-1">                                    
+                                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed ms-2" data-bs-toggle="collapse" data-bs-target="#news-source-collapse" aria-expanded="true">
+                                        Sources
+                                      </button>
+                                      <div class="collapse show" id="news-source-collapse">
+                                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-2">
+                                            <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">CNN</a></li>
+                                        </ul>
+                                      </div>
+                                </li>
+                              </ul> -->
                               <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Overview</a></li>
-                                <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Updates</a></li>
-                                <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Reports</a></li>
+                                <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">CNN</a></li>                                
                               </ul>
                             </div>
                           </li>
                           <li class="mb-1">
-                            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-                              Dashboard
+                            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#theme-collapse" aria-expanded="false">
+                              By Theme
                             </button>
-                            <div class="collapse" id="dashboard-collapse">
+                            <div class="collapse" id="theme-collapse">
                               <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Overview</a></li>
-                                <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Weekly</a></li>
-                                <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Monthly</a></li>
-                                <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Annually</a></li>
+                                <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Technology</a></li>
+                                <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Business</a></li>
+                                <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Entertainment</a></li>
+                                <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Sports</a></li>
                               </ul>
                             </div>
                           </li>
-                          <li class="mb-1">
-                            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
-                              Orders
-                            </button>
-                            <div class="collapse" id="orders-collapse">
-                              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">New</a></li>
-                                <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Processed</a></li>
-                                <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Shipped</a></li>
-                                <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Returned</a></li>
-                              </ul>
-                            </div>
-                          </li>
+                          <li class="mb-1 mt-2">Trending</li>
+                          <li>
+                            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#trending-collapse" aria-expanded="false">
+                                Trending
+                              </button>
+                              <div class="collapse" id="trending-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                  <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Technology</a></li>
+                                  <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Business</a></li>
+                                  <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Entertainment</a></li>
+                                  <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Sports</a></li>
+                                </ul>
+                              </div>
+                        </li>
                           <li class="border-top my-3"></li>                         
                         </ul>
                       </div>               
@@ -89,12 +109,16 @@
                     <span class="visually-hidden">Loading...</span>
                 </div>
             </div>
-        </div>
+        </div>     
+        
     </div>
     <script src="jquery.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="async.js"></script>
+    <script src="rss-parser.min.js"></script>
     <script src="mercury.js"></script>
+    <script src="data.js"></script>
+    <script src="updateHTML.js"></script>
     <script src="first.js"></script>
   </body>
 </html>

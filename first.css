@@ -1,5 +1,5 @@
 .offcanvas {
-    width: 80% !important;
+    width: 75% !important;
 }
 
 /* .offcanvas-body{
@@ -86,4 +86,29 @@
     overflow-y: scroll !important;
     margin: auto;
   }
+
+  .wpContent {
+    max-width: 900px !important;
+    cursor: default !important;
+    position: relative !important;
+    border: 1px solid !important;
+    margin: auto !important;
+    background-color: #fff !important;
+    color: #000 !important;
+    font-size: 0.9rem;
+  }
   
+
+  #wpContent img {
+    object-fit: cover;
+    max-width: 95%;
+    position: relative;
+    margin: auto;
+  }
+  
+  #first img {
+    object-fit: cover;
+    max-width: 95%;
+    position: relative;
+    margin: auto;
+  }
