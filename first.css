@@ -22,9 +22,9 @@
 }
 
 .btn-toggle::before {
-  width: 1.25em;
+  width: 1.5em;
   line-height: 0;
-  content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+  content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2.5' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
   transition: transform .35s ease;
   transform-origin: .5em 50%;
 }
@@ -68,15 +68,15 @@
     /* Sit on top of the page content */
     display: none;
     /* Hidden by default */
-    width: 100%;
+    width: 100vw;
     /* Full width (cover the whole page) */
-    height: 100%;
+    height: 100vh;
     /* Full height (cover the whole page) */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(253, 251, 251, 1);
+    background-color: rgba(253, 251, 251, 0);
     /* Black background with opacity */
     z-index: 2;
     /* Specify a stack order in case you're using a different order for other elements */
@@ -84,7 +84,30 @@
     /* Add a pointer on hover */
     color: #000;
     overflow-y: scroll !important;
-    margin: auto;
+    margin: auto;    
+  }
+  #overlay1 {
+    position: fixed;
+    /* Sit on top of the page content */
+    display: none;
+    /* Hidden by default */
+    width: 100vw;
+    /* Full width (cover the whole page) */
+    height: 100vh;
+    /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(12, 12, 12, 0.2);
+    /* Black background with opacity */
+    z-index: 2;
+    /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer;
+    /* Add a pointer on hover */
+    color: #000;
+    overflow-y: scroll !important;
+    margin: auto;    
   }
 
   .wpContent {
@@ -93,7 +116,7 @@
     position: relative !important;
     border: 1px solid !important;
     margin: auto !important;
-    background-color: #fff !important;
+    background-color: #f8f9fa !important;
     color: #000 !important;
     font-size: 0.9rem;
   }

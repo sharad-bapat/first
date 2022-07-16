@@ -1,124 +1,1029 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>First</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link href="first.css" rel="stylesheet">
-  </head>
-  <body>
-    <div class="navigation">
-        <nav class="navbar sticky-top">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-collection-fill" viewBox="0 0 16 16">
-                <path d="M0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zM2 3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11A.5.5 0 0 0 2 3zm2-2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7A.5.5 0 0 0 4 1z"/>
-              </svg></a>
-              <span class=" navbar-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-                  </svg>
-                </span>             
-              <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-collection-fill" viewBox="0 0 16 16">
-                        <path d="M0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zM2 3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11A.5.5 0 0 0 2 3zm2-2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7A.5.5 0 0 0 4 1z"/>
-                      </svg>
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <div class="flex-shrink-0 bg-white">                       
-                        <ul class="list-unstyled ps-0">    
-                          <li class="mb-1">News</li>
-                          <li class="mb-1">
-                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Top News</a></li>
-                                <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Country News</a></li>
-                                <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Language News</a></li>
-                              </ul>
-                          </li>                   
-                          <li class="mb-1">
-                            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#news-collapse" aria-expanded="false">
-                              By Source
-                            </button>
-                            <div class="collapse" id="news-collapse">
-                              <!-- <ul class="list-unstyled ps-0">
-                                <li class="mb-1 small ms-3"><span class="small">By Source</span></li>
-                                <li class="mb-1">                                    
-                                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed ms-2" data-bs-toggle="collapse" data-bs-target="#news-source-collapse" aria-expanded="true">
-                                        Sources
-                                      </button>
-                                      <div class="collapse show" id="news-source-collapse">
-                                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-2">
-                                            <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">CNN</a></li>
-                                        </ul>
-                                      </div>
-                                </li>
-                              </ul> -->
-                              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">CNN</a></li>                                
-                              </ul>
-                            </div>
-                          </li>
-                          <li class="mb-1">
-                            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#theme-collapse" aria-expanded="false">
-                              By Theme
-                            </button>
-                            <div class="collapse" id="theme-collapse">
-                              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Technology</a></li>
-                                <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Business</a></li>
-                                <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Entertainment</a></li>
-                                <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Sports</a></li>
-                              </ul>
-                            </div>
-                          </li>
-                          <li class="mb-1 mt-2">Trending</li>
-                          <li>
-                            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#trending-collapse" aria-expanded="false">
-                                Trending
-                              </button>
-                              <div class="collapse" id="trending-collapse">
-                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                  <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Technology</a></li>
-                                  <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Business</a></li>
-                                  <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Entertainment</a></li>
-                                  <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Sports</a></li>
-                                </ul>
-                              </div>
-                        </li>
-                          <li class="border-top my-3"></li>                         
-                        </ul>
-                      </div>               
-                </div>
-              </div>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>First</title>
+  <link href="bs.css" rel="stylesheet">
+  <link href="first.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="navigation">
+    <nav class="navbar" style="height: 45px;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            fill="currentColor" class="bi bi-collection-fill" viewBox="0 0 16 16">
+            <path
+              d="M0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zM2 3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11A.5.5 0 0 0 2 3zm2-2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7A.5.5 0 0 0 4 1z" />
+          </svg></a>
+        <span class=" navbar-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+          </svg>
+        </span>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+              class="bi bi-collection-fill" viewBox="0 0 16 16">
+              <path
+                d="M0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zM2 3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11A.5.5 0 0 0 2 3zm2-2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7A.5.5 0 0 0 4 1z" />
+            </svg>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="flex-shrink-0 bg-white">
+              <ul class="list-unstyled ps-0">
+                <li class="mb-1">News</li>
+                <li class="mb-1">
+                  <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#news-collapse" aria-expanded="false">
+                    GDELT
+                  </button>
+                  <div class="collapse" id="news-collapse">
+                    <ul class="list-unstyled ps-0">
+                      <li class="mb-1">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed ms-2"
+                          data-bs-toggle="collapse" data-bs-target="#gdelt-country" aria-expanded="false">
+                          Location
+                        </button>
+                        <div class="collapse" id="gdelt-country">
+                          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-2">
+                            <li data-bs-dismiss="offcanvas">
+                              <a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                                onclick="getGDELT('sourcelang:eng%20sourcecountry:india',250,'6h','datedesc').then(data=>populate(data));">
+                                India
+                              </a>
+                            </li>
+                            <li data-bs-dismiss="offcanvas">
+                              <a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                                onclick="getGDELT('sourcelang:eng%20sourcecountry:uk',250,'6h','datedesc').then(data=>populate(data));">
+                                UK
+                              </a>
+                            </li>
+                            <li data-bs-dismiss="offcanvas">
+                              <a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                                onclick="getGDELT('sourcelang:eng%20sourcecountry:us',250,'6h','datedesc').then(data=>populate(data));">
+                                US
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="mb-1">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed ms-2"
+                          data-bs-toggle="collapse" data-bs-target="#gdelt-language" aria-expanded="false">
+                          Language
+                        </button>
+                        <div class="collapse" id="gdelt-language">
+                          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-2">
+                            <li data-bs-dismiss="offcanvas">
+                              <a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                                onclick="getGDELT('sourcelang:eng',250,'6h','datedesc').then(data=>populate(data));">
+                                English
+                              </a>
+                            </li>
+                            <li data-bs-dismiss="offcanvas">
+                              <a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                                onclick="getGDELT('sourcelang:hindi',250,'6h','datedesc').then(data=>populate(data));">
+                                Hindi
+                              </a>
+                            </li>
+                            <li data-bs-dismiss="offcanvas">
+                              <a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                                onclick="getGDELT('sourcelang:Marathi',250,'6h','datedesc').then(data=>populate(data));">
+                                Marathi
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="mb-1">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed ms-2"
+                          data-bs-toggle="collapse" data-bs-target="#gdelt-themes" aria-expanded="false">
+                          Themes
+                        </button>
+                        <div class="collapse" id="gdelt-themes">
+                          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-2">
+                            <li data-bs-dismiss="offcanvas">
+                              <a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                                onclick="getGDELT('theme:ENV_CLIMATECHANGE%20sourcelang:eng',250,'12h','datedesc').then(data=>populate(data));">
+                                Climate Change
+                              </a>
+                            </li>
+                            <li data-bs-dismiss="offcanvas">
+                              <a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                                onclick="getGDELT('theme:education%20sourcelang:eng',250,'12h','datedesc').then(data=>populate(data));">
+                                Education
+                              </a>
+                            </li>
+                            <li data-bs-dismiss="offcanvas">
+                              <a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                                onclick="getGDELT('(theme:cyber_attack%20OR%20theme:WB_2370_DATA_SECURITY)%20sourcelang:eng',250,'6h','datedesc').then(data=>populate(data));">
+                                Cyber Attack
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="mb-1">
+                  <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#google-news" aria-expanded="false">
+                    Google News
+                  </button>
+                  <div class="collapse" id="google-news">
+                    <ul class="list-unstyled ps-0">
+                      <li class="mb-1">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed ms-2"
+                          data-bs-toggle="collapse" data-bs-target="#google-location" aria-expanded="false">
+                          Location
+                        </button>
+                        <div class="collapse" id="google-location">
+                          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-2">
+                            <li data-bs-dismiss="offcanvas">
+                              <a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                                onclick="getSingleRSS('https://news.google.com/rss?&hl=en-IN&gl=IN&ceid=IN:en').then(data=>populate(data));">
+                                India
+                              </a>
+                            </li>
+                            <li data-bs-dismiss="offcanvas">
+                              <a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                                onclick="getSingleRSS('https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSkwyMHZNREZmZVhaNUVnVmxiaTFIUWlnQVAB?&hl=en-IN&gl=IN&ceid=IN:en').then(data=>populate(data, 0));">
+                                Indore
+                              </a>
+                            </li>
+                            <li data-bs-dismiss="offcanvas">
+                              <a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                                onclick="getSingleRSS('https://news.google.com/rss/topics/CAAqJQgKIh9DQkFTRVFvSUwyMHZNRGxqTm5jU0JXVnVMVWRDS0FBUAE?&hl=en-IN&gl=IN&ceid=IN:en').then(data=>populate(data, 0));">
+                                Hyderabad
+                              </a>
+                            </li>
+                            <li data-bs-dismiss="offcanvas">
+                              <a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                                onclick="getSingleRSS('https://news.google.com/rss?&hl=en-GB&gl=GB&ceid=GB:en').then(data=>populate(data));">
+                                UK
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="mb-1">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed ms-2"
+                          data-bs-toggle="collapse" data-bs-target="#google-language" aria-expanded="false">
+                          Language
+                        </button>
+                        <div class="collapse" id="google-language">
+                          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-2">
+                            <li data-bs-dismiss="offcanvas">
+                              <a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                                onclick="getSingleRSS('https://news.google.com/rss?&hl=hi-IN&gl=IN&ceid=IN:hi').then(data=>populate(data));">
+                                Hindi
+                              </a>
+                            </li>
+                            <li data-bs-dismiss="offcanvas">
+                              <a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                                onclick="getSingleRSS('https://news.google.com/rss?&hl=mr-IN&gl=IN&ceid=IN:mr').then(data=>populate(data));">
+                                Marathi
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="mb-1">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed ms-2"
+                          data-bs-toggle="collapse" data-bs-target="#google-themes" aria-expanded="false">
+                          Themes
+                        </button>
+                        <div class="collapse" id="google-themes">
+                          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-2">
+                            <li data-bs-dismiss="offcanvas">
+                              <a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                                onclick="getSingleRSS('https://news.google.com/rss/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRGx1YlY4U0JXVnVMVWRDR2dKSlRpZ0FQAQ?&hl=en-IN&gl=IN&ceid=IN:en').then(data=>populate(data, 0));">
+                                World
+                              </a>
+                            </li>
+                            <li data-bs-dismiss="offcanvas">
+                              <a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                                onclick="getSingleRSS('https://news.google.com/rss/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRGRqTVhZU0JXVnVMVWRDR2dKSlRpZ0FQAQ?&hl=en-IN&gl=IN&ceid=IN:en').then(data=>populate(data, 0));">
+                                Technology
+                              </a>
+                            </li>
+                            <li data-bs-dismiss="offcanvas">
+                              <a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                                onclick="getSingleRSS('https://news.google.com/rss/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRGx6TVdZU0JXVnVMVWRDR2dKSlRpZ0FQAQ?&hl=en-IN&gl=IN&ceid=IN:en').then(data=>populate(data, 0));">
+                                Business
+                              </a>
+                            </li>
+                            <li data-bs-dismiss="offcanvas">
+                              <a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                                onclick="getSingleRSS('https://news.google.com/rss/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNREpxYW5RU0JXVnVMVWRDR2dKSlRpZ0FQAQ?&hl=en-IN&gl=IN&ceid=IN:en').then(data=>populate(data, 0));">
+                                Entertainment
+                              </a>
+                            </li>
+                            <li data-bs-dismiss="offcanvas">
+                              <a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                                onclick="getSingleRSS('https://news.google.com/rss/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRFp1ZEdvU0JXVnVMVWRDR2dKSlRpZ0FQAQ?&hl=en-IN&gl=IN&ceid=IN:en').then(data=>populate(data, 0));">
+                                Sports
+                              </a>
+                            </li>
+                            <li data-bs-dismiss="offcanvas">
+                              <a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                                onclick="getSingleRSS('https://news.google.com/rss/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRFp0Y1RjU0JXVnVMVWRDR2dKSlRpZ0FQAQ?&hl=en-IN&gl=IN&ceid=IN:en').then(data=>populate(data, 0));">
+                                Science
+                              </a>
+                            </li>
+                            <li data-bs-dismiss="offcanvas">
+                              <a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                                onclick="getSingleRSS('https://news.google.com/rss/topics/CAAqJQgKIh9DQkFTRVFvSUwyMHZNR3QwTlRFU0JXVnVMVWRDS0FBUAE?&hl=en-IN&gl=IN&ceid=IN:en').then(data=>populate(data, 0));">
+                                Health
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="mb-1">
+                  <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#news-emm" aria-expanded="false">
+                    European Media Monitor
+                  </button>
+                  <div class="collapse" id="news-emm">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                      <li data-bs-dismiss="offcanvas"><a href="#"
+                          class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getEMM('top').then(data=>populate(data, 1));">
+                          Top Stories
+                        </a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#"
+                          class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getSingleRSS('https://emm.newsbrief.eu/rss/rss?type=24hrs&language=en&duplicates=false').then(data=>populate(data, 0));">
+                          24H
+                        </a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#"
+                          class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getEMM('events').then(data=>populate(data, 1));">
+                          Events
+                        </a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#"
+                          class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getSingleRSS('https://emm.newsbrief.eu/rss/rss?type=category&id=India&language=en&duplicates=false').then(data=>populate(data, 0));">
+                          India
+                        </a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#"
+                          class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getSingleRSS('https://emm.newsbrief.eu/rss/rss?type=category&id=Conflict&language=en&duplicates=false').then(data=>populate(data, 0));">
+                          Conflicts
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="mb-1">
+                  <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#news-reddit" aria-expanded="false">
+                    Reddit
+                  </button>
+                  <div class="collapse" id="news-reddit">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                      <li data-bs-dismiss="offcanvas"><a href="#"
+                          class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getReddit('worldnews+technology+business+finance+technews+economy').then(data=>populate(data, 1));">
+                          Top News
+                        </a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#"
+                          class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getReddit('worldnews').then(data=>populate(data, 1));">
+                          World News
+                        </a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#"
+                          class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getReddit('tech+technology+gadgets+android+apple').then(data=>populate(data, 1));">
+                          Technology
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="mb-1">
+                  <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#news-rss" aria-expanded="false">
+                    RSS
+                  </button>
+                  <div class="collapse" id="news-rss">
+                    <ul class="list-unstyled ps-0">
+                      <li class="mb-1">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed ms-2"
+                          data-bs-toggle="collapse" data-bs-target="#rss-theme" aria-expanded="false">
+                          Theme
+                        </button>
+                        <div class="collapse" id="rss-theme">
+                          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-2">
+                            <li data-bs-dismiss="offcanvas"><a href="#"
+                                class="link-dark d-inline-flex text-decoration-none rounded" onclick="getMultipleRSS([
+                                                                  'https://feeds.npr.org/1001/rss.xml',
+                                                                  'http://feeds.bbci.co.uk/news/world/rss.xml',
+                                                                  'http://rss.cnn.com/rss/edition_world.rss',
+                                                                  'https://rss.nytimes.com/services/xml/rss/nyt/World.xml',
+                                                                  'http://www.aljazeera.com/xml/rss/all.xml',
+                                                                  'https://timesofindia.indiatimes.com/rssfeeds/296589292.cms',
+                                                                  'https://www.cnbc.com/id/100727362/device/rss/rss.html',        
+                                                              ]).then(data=>populate(data, 1));">
+                                World News
+                              </a>
+                            </li>
+                            <li data-bs-dismiss="offcanvas"><a href="#"
+                                class="link-dark d-inline-flex text-decoration-none rounded" onclick="getMultipleRSS([
+                                                     'https://www.techmeme.com/feed.xml?x=1',
+                                                                                      'https://www.wired.com/feed/rss',
+                                                                                      'https://techcrunch.com/feed/',
+                                                                                      'https://www.technologyreview.com/topnews.rss',
+                                                                                      'http://www.theverge.com/rss/frontpage',
+                                                                                      'http://feeds.feedburner.com/venturebeat/SZYF',
+                                                                                      'http://feeds.arstechnica.com/arstechnica/technology-lab',      
+                                                                                    ]).then(data=>populate(data, 1));">
+                                Tech News
+                              </a>
+                            </li>
+                            <li data-bs-dismiss="offcanvas"><a href="#"
+                                class="link-dark d-inline-flex text-decoration-none rounded" onclick="getMultipleRSS([
+                        'http://feeds.feedburner.com/NDTV-LatestNews',
+                'https://www.indiatoday.in/rss/1206578',
+                'https://indianexpress.com/feed/',
+                'https://www.thehindu.com/news/national/?service=rss',
+                'http://www.news18.com/rss/india.xml',
+                'https://www.dnaindia.com/feeds/india.xml',
+                'https://www.deccanchronicle.com/rss_feed/',
+                'http://feeds.feedburner.com/ScrollinArticles.rss',
+                'https://prod-qt-images.s3.amazonaws.com/production/thequint/feed.xml',
+                'https://telanganatoday.com/feed',
+                'https://cms.qz.com/feed/edition/india/',    
+                      ]).then(data=>populate(data, 1));">
+                                India News
+                              </a>
+                            </li>
+                            <li data-bs-dismiss="offcanvas"><a href="#"
+                                class="link-dark d-inline-flex text-decoration-none rounded" onclick="getMultipleRSS([
+                    'https://economictimes.indiatimes.com/rssfeedsdefault.cms',
+                'http://www.financialexpress.com/feed',
+                'https://prod-qt-images.s3.amazonaws.com/production/bloombergquint/feed.xml',
+                'https://in.mashable.com/business-1.xml',
+                'https://www.ft.com/?format=rss', 
+                    ]).then(data=>populate(data, 1));">
+                                Business News
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                    <ul class="list-unstyled ps-0">
+                      <li class="mb-1">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed ms-2"
+                          data-bs-toggle="collapse" data-bs-target="#rss-source" aria-expanded="false">
+                          Source
+                        </button>
+                        <div class="collapse" id="rss-source">
+                          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-2">
+                            <li data-bs-dismiss="offcanvas"><a href="#"
+                                class="link-dark d-inline-flex text-decoration-none rounded" onclick="getSingleRSS('https://www.bustle.com/rss').then(data=>populate(data, 1));">
+                                Bustle
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <hr>
+                <li class="mb-1 mt-2">Wordpress.com</li>
+                <li>
+                  <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#trending-collapse" aria-expanded="false">
+                    Sites
+                  </button>
+                  <div class="collapse" id="trending-collapse">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded" onclick="getWordpressCOMPosts(['dgnews.co.in'],50).then(data=>populate(data, 0));">DG News</a></li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded" onclick="getWordpressCOMPosts(['shiftindia.com'],50).then(data=>populate(data, 0));">The Shift India</a></li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded" onclick="getWordpressCOMPosts(['thecatwriter.com'],50).then(data=>populate(data, 0));">The CAT Writer</a></li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded" onclick="getWordpressCOMPosts(['url4ever.com'],50).then(data=>populate(data, 0));">URL4Ever</a></li>
+
+                    </ul>
+                  </div>
+                </li>
+                <hr>
+                <li class="mb-1 mt-2">Wordpress.org</li>
+                <li>
+                  <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#wporg-collapse" aria-expanded="false">
+                    Sites
+                  </button>
+                  <div class="collapse" id="wporg-collapse">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                      <!-- <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded" onclick="getWordpressORGPosts(['https://www.sarita.in'],50).then(data=>populate(data, 0));">www.sarita.in</a></li>
+                                        <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded" onclick="getWordpressORGPosts(['https://theprint.in/'],50).then(data=>populate(data, 0));">theprint.in</a></li>
+                                        <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded" onclick="getWordpressORGPosts(['https://thewire.in/'],50).then(data=>populate(data, 0));">thewire.in</a></li>
+                                        <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded" onclick="getWordpressORGPosts(['https://time.com/'],50).then(data=>populate(data, 0));">time.com</a></li> -->
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.sarita.in'],25).then(data=>populate(data, 1));">https://www.sarita.in</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://theprint.in'],25).then(data=>populate(data, 1));">https://theprint.in</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://thewire.in'],25).then(data=>populate(data, 1));">https://thewire.in</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.hollywoodreporter.com'],25).then(data=>populate(data, 1));">https://www.hollywoodreporter.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.thewindowsclub.com'],25).then(data=>populate(data, 1));">https://www.thewindowsclub.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://beebom.com'],25).then(data=>populate(data, 1));">https://beebom.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://wired.com'],25).then(data=>populate(data, 1));">https://wired.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://time.com'],25).then(data=>populate(data, 1));">https://time.com</a></li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://byjus.com'],25).then(data=>populate(data, 1));">https://byjus.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.thebeautyinsiders.com'],25).then(data=>populate(data, 1));">https://www.thebeautyinsiders.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.opensourceforu.com'],25).then(data=>populate(data, 1));">https://www.opensourceforu.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://beautyhealthtips.in'],25).then(data=>populate(data, 1));">https://beautyhealthtips.in</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.thestatesman.com'],25).then(data=>populate(data, 1));">https://www.thestatesman.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.codexworld.com'],25).then(data=>populate(data, 1));">https://www.codexworld.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.pcworld.com'],25).then(data=>populate(data, 1));">https://www.pcworld.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://reference.com'],25).then(data=>populate(data, 1));">https://reference.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://thenai.org'],25).then(data=>populate(data, 1));">https://thenai.org</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.ask.com'],25).then(data=>populate(data, 1));">https://www.ask.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://focus.politico.com'],25).then(data=>populate(data, 1));">https://focus.politico.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.state.gov'],25).then(data=>populate(data, 1));">https://www.state.gov</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.snopes.com'],25).then(data=>populate(data, 1));">https://www.snopes.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://deadline.com'],25).then(data=>populate(data, 1));">https://deadline.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.themarginalian.org'],25).then(data=>populate(data, 1));">https://www.themarginalian.org</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://bronxboropres.nyc.gov'],25).then(data=>populate(data, 1));">https://bronxboropres.nyc.gov</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://wikimedia.org.uk'],25).then(data=>populate(data, 1));">https://wikimedia.org.uk</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://iite.unesco.org'],25).then(data=>populate(data, 1));">https://iite.unesco.org</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://creativecommons.org'],25).then(data=>populate(data, 1));">https://creativecommons.org</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.ctoforum.org'],25).then(data=>populate(data, 1));">https://www.ctoforum.org</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://techcrunch.com'],25).then(data=>populate(data, 1));">https://techcrunch.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://time.com'],25).then(data=>populate(data, 1));">https://time.com</a></li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://wired.com'],25).then(data=>populate(data, 1));">https://wired.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://observer.com'],25).then(data=>populate(data, 1));">https://observer.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://variety.com'],25).then(data=>populate(data, 1));">https://variety.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://thesun.co.uk'],25).then(data=>populate(data, 1));">https://thesun.co.uk</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://o.canada.com'],25).then(data=>populate(data, 1));">https://o.canada.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://9to5mac.com'],25).then(data=>populate(data, 1));">https://9to5mac.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://metro.co.uk'],25).then(data=>populate(data, 1));">https://metro.co.uk</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://boingboing.net'],25).then(data=>populate(data, 1));">https://boingboing.net</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://blog.ted.com'],25).then(data=>populate(data, 1));">https://blog.ted.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://blog.mozilla.org'],25).then(data=>populate(data, 1));">https://blog.mozilla.org</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://news.harvard.edu'],25).then(data=>populate(data, 1));">https://news.harvard.edu</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.rd.com'],25).then(data=>populate(data, 1));">https://www.rd.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://thehustle.co'],25).then(data=>populate(data, 1));">https://thehustle.co</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://a16z.com'],25).then(data=>populate(data, 1));">https://a16z.com</a></li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://dancemagazine.com'],25).then(data=>populate(data, 1));">https://dancemagazine.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://lithub.com'],25).then(data=>populate(data, 1));">https://lithub.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://stereogum.com'],25).then(data=>populate(data, 1));">https://stereogum.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.rollingstone.com'],25).then(data=>populate(data, 1));">https://www.rollingstone.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://foreignpolicy.com'],25).then(data=>populate(data, 1));">https://foreignpolicy.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.technologyreview.com'],25).then(data=>populate(data, 1));">https://www.technologyreview.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://reallifemag.com'],25).then(data=>populate(data, 1));">https://reallifemag.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.popsci.com'],25).then(data=>populate(data, 1));">https://www.popsci.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://harpers.org'],25).then(data=>populate(data, 1));">https://harpers.org</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.champak.in'],25).then(data=>populate(data, 1));">https://www.champak.in</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://womansera.com'],25).then(data=>populate(data, 1));">https://womansera.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://tehelkahindi.com'],25).then(data=>populate(data, 1));">https://tehelkahindi.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.todaystraveller.net'],25).then(data=>populate(data, 1));">https://www.todaystraveller.net</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://tinkle.in'],25).then(data=>populate(data, 1));">https://tinkle.in</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://openthemagazine.com'],25).then(data=>populate(data, 1));">https://openthemagazine.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://newwomanindia.com'],25).then(data=>populate(data, 1));">https://newwomanindia.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://dqindia.com'],25).then(data=>populate(data, 1));">https://dqindia.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.ctoforum.org'],25).then(data=>populate(data, 1));">https://www.ctoforum.org</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://grihshobha.in'],25).then(data=>populate(data, 1));">https://grihshobha.in</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://merisaheli.com'],25).then(data=>populate(data, 1));">https://merisaheli.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.sarassalil.in'],25).then(data=>populate(data, 1));">https://www.sarassalil.in</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.sarita.in'],25).then(data=>populate(data, 1));">https://www.sarita.in</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.usmagazine.com'],25).then(data=>populate(data, 1));">https://www.usmagazine.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.mansworldindia.com'],25).then(data=>populate(data, 1));">https://www.mansworldindia.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.marieclaire.co.uk'],25).then(data=>populate(data, 1));">https://www.marieclaire.co.uk</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://sciencefocus.com'],25).then(data=>populate(data, 1));">https://sciencefocus.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://theprint.in'],25).then(data=>populate(data, 1));">https://theprint.in</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://thewire.in'],25).then(data=>populate(data, 1));">https://thewire.in</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.snopes.com'],25).then(data=>populate(data, 1));">https://www.snopes.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://deadline.com'],25).then(data=>populate(data, 1));">https://deadline.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.searchenginejournal.com'],25).then(data=>populate(data, 1));">https://www.searchenginejournal.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://nationalreview.com'],25).then(data=>populate(data, 1));">https://nationalreview.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://explore.tandfonline.com'],25).then(data=>populate(data, 1));">https://explore.tandfonline.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://groww.in'],25).then(data=>populate(data, 1));">https://groww.in</a></li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://cricketaddictor.com'],25).then(data=>populate(data, 1));">https://cricketaddictor.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://thewindowsclub.com'],25).then(data=>populate(data, 1));">https://thewindowsclub.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://scrubbing.in'],25).then(data=>populate(data, 1));">https://scrubbing.in</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://mechanicalbooster.com'],25).then(data=>populate(data, 1));">https://mechanicalbooster.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://fashion101.in'],25).then(data=>populate(data, 1));">https://fashion101.in</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://hindiyojana.in'],25).then(data=>populate(data, 1));">https://hindiyojana.in</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://websitehindi.com'],25).then(data=>populate(data, 1));">https://websitehindi.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://covid19.memphistn.gov'],25).then(data=>populate(data, 1));">https://covid19.memphistn.gov</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://mfg.com'],25).then(data=>populate(data, 1));">https://mfg.com</a></li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://amazingcharts.com'],25).then(data=>populate(data, 1));">https://amazingcharts.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://mccchurch.org'],25).then(data=>populate(data, 1));">https://mccchurch.org</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.montserrat.edu'],25).then(data=>populate(data, 1));">https://www.montserrat.edu</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://allwork.space'],25).then(data=>populate(data, 1));">https://allwork.space</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://suttoncoldfieldtownhall.com'],25).then(data=>populate(data, 1));">https://suttoncoldfieldtownhall.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://apollotechnical.com'],25).then(data=>populate(data, 1));">https://apollotechnical.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://davietjal.org'],25).then(data=>populate(data, 1));">https://davietjal.org</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://historyextra.com'],25).then(data=>populate(data, 1));">https://historyextra.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.fatherly.com'],25).then(data=>populate(data, 1));">https://www.fatherly.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.wellandgood.com'],25).then(data=>populate(data, 1));">https://www.wellandgood.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://ideas.ted.com'],25).then(data=>populate(data, 1));">https://ideas.ted.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.calnewport.com'],25).then(data=>populate(data, 1));">https://www.calnewport.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://thewalrus.ca'],25).then(data=>populate(data, 1));">https://thewalrus.ca</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://thereader.mitpress.mit.edu'],25).then(data=>populate(data, 1));">https://thereader.mitpress.mit.edu</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://lithub.com'],25).then(data=>populate(data, 1));">https://lithub.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://thehustle.co'],25).then(data=>populate(data, 1));">https://thehustle.co</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.visualcapitalist.com'],25).then(data=>populate(data, 1));">https://www.visualcapitalist.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://a16z.com'],25).then(data=>populate(data, 1));">https://a16z.com</a></li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.iwillteachyoutoberich.com'],25).then(data=>populate(data, 1));">https://www.iwillteachyoutoberich.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.motherjones.com'],25).then(data=>populate(data, 1));">https://www.motherjones.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://themarthablog.com'],25).then(data=>populate(data, 1));">https://themarthablog.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://afterellen.com'],25).then(data=>populate(data, 1));">https://afterellen.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.viralbake.com'],25).then(data=>populate(data, 1));">https://www.viralbake.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://copyblogger.com'],25).then(data=>populate(data, 1));">https://copyblogger.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.iwillteachyoutoberich.com'],25).then(data=>populate(data, 1));">https://www.iwillteachyoutoberich.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://neilpatel.com'],25).then(data=>populate(data, 1));">https://neilpatel.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://seths.blog'],25).then(data=>populate(data, 1));">https://seths.blog</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://talkingpointsmemo.com'],25).then(data=>populate(data, 1));">https://talkingpointsmemo.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://sayyes.com'],25).then(data=>populate(data, 1));">https://sayyes.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://cupofjo.com'],25).then(data=>populate(data, 1));">https://cupofjo.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://myplasticfreelife.com'],25).then(data=>populate(data, 1));">https://myplasticfreelife.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.gottman.com'],25).then(data=>populate(data, 1));">https://www.gottman.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://blog.joemcnally.com'],25).then(data=>populate(data, 1));">https://blog.joemcnally.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.lightstalking.com'],25).then(data=>populate(data, 1));">https://www.lightstalking.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.thephoblographer.com'],25).then(data=>populate(data, 1));">https://www.thephoblographer.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://makingsenseofcents.com'],25).then(data=>populate(data, 1));">https://makingsenseofcents.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://firstsiteguide.com'],25).then(data=>populate(data, 1));">https://firstsiteguide.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://stevepavlina.com'],25).then(data=>populate(data, 1));">https://stevepavlina.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.marksdailyapple.com'],25).then(data=>populate(data, 1));">https://www.marksdailyapple.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.bornfitness.com'],25).then(data=>populate(data, 1));">https://www.bornfitness.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://carrotsncake.com'],25).then(data=>populate(data, 1));">https://carrotsncake.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://crankyflier.com'],25).then(data=>populate(data, 1));">https://crankyflier.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://theglobalchurchproject.com'],25).then(data=>populate(data, 1));">https://theglobalchurchproject.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://parallaxphotographic.coop'],25).then(data=>populate(data, 1));">https://parallaxphotographic.coop</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.smartpassiveincome.com'],25).then(data=>populate(data, 1));">https://www.smartpassiveincome.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://theblondesalad.com'],25).then(data=>populate(data, 1));">https://theblondesalad.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://timothysykes.com'],25).then(data=>populate(data, 1));">https://timothysykes.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://abeautifulmess.com'],25).then(data=>populate(data, 1));">https://abeautifulmess.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://digital-photography-school.com'],25).then(data=>populate(data, 1));">https://digital-photography-school.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://problogger.com'],25).then(data=>populate(data, 1));">https://problogger.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://itsalovelylife.com'],25).then(data=>populate(data, 1));">https://itsalovelylife.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://smartblogger.com'],25).then(data=>populate(data, 1));">https://smartblogger.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://shoutmeloud.com'],25).then(data=>populate(data, 1));">https://shoutmeloud.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://cashoverflow.in'],25).then(data=>populate(data, 1));">https://cashoverflow.in</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://trak.in'],25).then(data=>populate(data, 1));">https://trak.in</a></li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.jagoinvestor.com'],25).then(data=>populate(data, 1));">https://www.jagoinvestor.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://techpp.com'],25).then(data=>populate(data, 1));">https://techpp.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.alltechbuzz.net'],25).then(data=>populate(data, 1));">https://www.alltechbuzz.net</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://madammoney.com'],25).then(data=>populate(data, 1));">https://madammoney.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://thedishdaily.com'],25).then(data=>populate(data, 1));">https://thedishdaily.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://designformankind.com'],25).then(data=>populate(data, 1));">https://designformankind.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://followinghadrian.com'],25).then(data=>populate(data, 1));">https://followinghadrian.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.themarginalian.org'],25).then(data=>populate(data, 1));">https://www.themarginalian.org</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://historyextra.com'],25).then(data=>populate(data, 1));">https://historyextra.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://mg.co.za'],25).then(data=>populate(data, 1));">https://mg.co.za</a></li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.nirandfar.com'],25).then(data=>populate(data, 1));">https://www.nirandfar.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://marketingjournal.org'],25).then(data=>populate(data, 1));">https://marketingjournal.org</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://goachronicle.com'],25).then(data=>populate(data, 1));">https://goachronicle.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.siasat.com'],25).then(data=>populate(data, 1));">https://www.siasat.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://www.theindianpanorama.news'],25).then(data=>populate(data, 1));">https://www.theindianpanorama.news</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://motherjones.com'],25).then(data=>populate(data, 1));">https://motherjones.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://openculture.com'],25).then(data=>populate(data, 1));">https://openculture.com</a>
+                      </li>
+                      <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"
+                          onclick="getWordpressORGPosts(['https://telanganatoday.com'],25).then(data=>populate(data, 1));">https://telanganatoday.com</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <hr>
+                <li class="mb-1 mt-2">Google</li>
+                <li>
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded" onclick="getGoogleSearchTrends().then(data=>populateGoogleSearchTrends(data));">Search Trends</a></li>
+                    <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded" onclick="getRealTimeTrends().then(data=>populateRealTimeTrends(data));">Realtime Trends</a></li>
+                  </ul>
+                </li>
+                <hr>
+                <li class="mb-1 mt-2">Wiki</li>
+                <li>
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li data-bs-dismiss="offcanvas"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded" onclick="getWikiData().then(data=>populateWiki(data));">Wiki</a></li>
+                  </ul>
+                </li>
+                <li class="border-top my-3"></li>
+              </ul>
             </div>
-          </nav>
-    </div>
-    <div class="container d-flex justify-content-center" style="margin-bottom: 20px !important;">
-        <div class="col">
-            <ul class="list-group list-group-flush mt-1" id="first" style="max-width:calc(100vw - 5px);">
-            </ul>
+          </div>
         </div>
-    </div>  
-    <div class="container col-lg-6 col-md-6 col-sm-12">    
-        <!--Overlay-->
-        <div id="overlay">
-            <div class="col-md-10 wpContent p-3 mb-4 card-body rounded" id="wpContent">
-                <div class="spinner-border" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
-            </div>
-        </div>     
-        
+      </div>
+    </nav>
+  </div>
+  <div class="container d-flex justify-content-center" style="margin-bottom: 20px !important;">
+    <div class="col">
+      <ul class="list-group list-group-flush mt-3" id="first" style="max-width:calc(100vw - 5px);">
+      </ul>
     </div>
-    <script src="jquery.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script src="async.js"></script>
-    <script src="rss-parser.min.js"></script>
-    <script src="mercury.js"></script>
-    <script src="data.js"></script>
-    <script src="updateHTML.js"></script>
-    <script src="first.js"></script>
-  </body>
+  </div>
+  <div class="container col-lg-6 col-md-6 col-sm-12">
+    <!--Overlay-->
+    <div id="overlay">
+      <div class="col-md-10 wpContent p-3 mb-4 card-body rounded" id="wpContent">
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="container col-lg-6 col-md-6 col-sm-12">
+    <!--Overlay-->
+    <div id="overlay1">
+      <div class="col-md-10 p-3 mb-4 card-body rounded align-self-center">
+        <div class="d-flex justify-content-center">
+          <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!--
+    <div class="container mt-3">
+      <div class="row justify-content-end">
+        <div class="col-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star"
+            viewBox="0 0 16 16">
+            <path
+              d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+          </svg>
+        </div>
+        <div class="col-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash"
+            viewBox="0 0 16 16">
+            <path
+              d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+            <path fill-rule="evenodd"
+              d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+          </svg>
+        </div>
+
+        <div class="col-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share"
+            viewBox="0 0 16 16">
+            <path
+              d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z" />
+          </svg>
+        </div>
+        <div class="col-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
+            <path fill-rule="evenodd"
+              d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
+          </svg>
+        </div>
+
+
+
+      </div>
+    </div>
+    -->
+
+  <script src="jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <script src="async.js"></script>
+  <script src="helper.js"></script>
+  <script src="rss-parser.min.js"></script>
+  <script src="mercury.js"></script>
+  <script src="data.js"></script>
+  <script src="dom.js"></script>
+  <script src="first.js"></script>
+</body>
+
 </html>
