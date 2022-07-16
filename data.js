@@ -1,4 +1,4 @@
-const CORS_PROXY = "http://sbcors.herokuapp.com/";
+const CORS_PROXY = "https://sbcors.herokuapp.com/";
 
 //RSS
 function normalizeRSS(data){
